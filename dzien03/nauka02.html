@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Nauka 01</title>
+        <style>
+            output {
+                outline: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Nauka 01</h1>
+
+        <p>Cena netto: <output id='cn'></output></p>
+        <p>Cena brutto: <output id='cb'></output></p>
+        <p>podatek VAT: <output id='pV'></output></p>
+
+        <p><del>Zadanie: dopisać obliczanie wysokości podatku VAT oraz wyświetlić obliczoną wartość.</del></p>
+        <p><del>Zadanie: dopisać wyświetlanie ceny netto i podatku na stronie HTML</del></p>
+        <script>
+            cenaNetto = 180;
+            cenaBrutto = cenaNetto * 1.23;
+            podatekVAT = cenaBrutto - cenaNetto;
+
+            console.log("Mój pierwszy skrypt JS");
+            console.log(cenaNetto);
+            console.log(cenaBrutto);
+            console.log(podatekVAT);
+
+            document.querySelector("#cb").value = cenaBrutto;
+            document.querySelector("#cn").value = cenaNetto;
+            document.querySelector("#pV").value = podatekVAT;
+
+        </script>
+
+    </body>
+</html>
