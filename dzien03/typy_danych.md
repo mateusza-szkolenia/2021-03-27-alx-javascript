@@ -28,8 +28,32 @@ np.
 * `"Szkolenie Javascript"`
 * `'Szkolenie Javascript'`
 
+#### własności
+- długość: `imie.length`
+
+#### metody
+- zmień jakiś fragment na inny: `zdanie.replace('Ala', 'Ola')`
+
+
 ### boolean
 inaczej: wartości logiczne, boolowskie
 
 * `true`
 * `false`
+
+## Złożone
+
+### array (tablica)
+
+Służy do przechowywania pewnej liczby wartości. Może przechowywać wartości dowolnych typów.
+
+np.
+* `[5, 6, 4, 3, 2, 5, 6, 6, 6]`
+* `["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "paź", "lis", "gru"]`
+
+#### własności
+- długość: `oceny.length`
+
+#### metody
+- dopisz element na końcu: `oceny.push(1)`
+- znajdź pozycję: `miesiace.indexOf('lip')` - zwraca pozycję lub `-1` jeśli nie znaleziono
