@@ -34,6 +34,9 @@
             if (wiek >= 18){
                 document.querySelector("#peln").value = "pełnoletni"
             }
+            if (wiek < 18){
+                document.querySelector("#peln").value = "niepełnoletni"
+            }
 
             document.querySelector("#kpos").value = kpos;
             document.querySelector("#ksen").value = ksen;
