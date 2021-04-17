@@ -13,8 +13,14 @@
         <h1>Nauka 02</h1>
 
         <p>Cena netto: <input id='cn'></input></p>
+        <p>Ile sztuk: <input id='szt'></input></p>
+
         <p>Cena brutto: <output id='cb'></output></p>
         <p>podatek VAT: <output id='pV'></output></p>
+
+        <p>Wartość netto: <output id='wn'></output></p>
+        <p>Wartość brutto: <output id='wb'></output></p>
+
         <button onclick='przelicz()'>Przelicz</button>
 
         <p>Zadanie: dopisać pole formularza <b>sztuki</b> i policzyć wartość całkowitą (netto i brutto)</p>
@@ -22,11 +28,16 @@
         <script>
             function przelicz(){
                 cenaNetto = document.querySelector("#cn").value;
+                ileSztuk = document.querySelector("#szt").value;
                 cenaBrutto = cenaNetto * 1.23;
                 podatekVAT = cenaBrutto - cenaNetto;
+                wartoscNetto = ileSztuk * cenaNetto;
+                wartoscBrutto = ileSztuk * cenaBrutto;
 
                 document.querySelector("#cb").value = cenaBrutto;
                 document.querySelector("#pV").value = podatekVAT;
+                document.querySelector("#wn").value = wartoscNetto;
+                document.querySelector("#wb").value = wartoscBrutto;
             }
         </script>
 
