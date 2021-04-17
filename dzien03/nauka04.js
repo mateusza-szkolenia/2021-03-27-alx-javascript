@@ -1,14 +1,14 @@
 function przelicz(){
-    rokur = parseInt(document.querySelector("#rokur").value);
-    rokbiez = 2021;
+    var rokur = parseInt(document.querySelector("#rokur").value);
+    var rokbiez = 2021;
 
-    wiek = rokbiez - rokur;
-    kpos = wiek >= 21;
-    ksen = wiek >= 30;
-    kpre = wiek >= 35;
+    var wiek = rokbiez - rokur;
+    var kpos = wiek >= 21;
+    var ksen = wiek >= 30;
+    var kpre = wiek >= 35;
 
-    rokpeln = rokur + 18;
-    ilepeln = rokpeln - rokbiez;
+    var rokpeln = rokur + 18;
+    var ilepeln = rokpeln - rokbiez;
 
     document.querySelector("#wiek").value = wiek;
 
