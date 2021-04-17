@@ -48,8 +48,10 @@ inaczej: wartości logiczne, boolowskie
 Służy do przechowywania pewnej liczby wartości. Może przechowywać wartości dowolnych typów.
 
 np.
-* `[5, 6, 4, 3, 2, 5, 6, 6, 6]`
-* `["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "paź", "lis", "gru"]`
+* `[5, 6, 4, 3, 2, 5, 6, 6, 6]`  - tablica z liczbami
+* `["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "paź", "lis", "gru"]` - tablica z napisami
+* `[5, "alamakota", false, 78]` - tablica z wartościami różnych typów
+* `[100, [3,4,5,6], ["styczeń", "luty", "marzec"]]` - tablica z zagnieżdżonymi tablicami
 
 #### własności
 - długość: `oceny.length`
