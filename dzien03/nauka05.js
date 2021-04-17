@@ -1,12 +1,12 @@
 temperatura = 20.0;
 
 function zwieksz_temp(){
-    temperatura = temperatura + 0.25;
+    temperatura = temperatura + 0.5;
     pokaz_temp();
 }
 
 function zmniejsz_temp(){
-    temperatura = temperatura - 0.25;
+    temperatura = temperatura - 0.5;
     pokaz_temp();
 }
 
