@@ -25,13 +25,16 @@
             rokbiez = 2021;
 
             wiek = rokbiez - rokur;
-            peln = wiek >= 18;
             kpos = wiek >= 21;
             ksen = wiek >= 30;
             kpre = wiek >= 35;
 
             document.querySelector("#wiek").value = wiek;
-            document.querySelector("#peln").value = peln;
+
+            if (wiek >= 18){
+                document.querySelector("#peln").value = "pełnoletni"
+            }
+
             document.querySelector("#kpos").value = kpos;
             document.querySelector("#ksen").value = ksen;
             document.querySelector("#kpre").value = kpre;
