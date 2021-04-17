@@ -18,6 +18,7 @@ h1 {
     font-family: PokemonFont2, Tahoma, Arial, sans-serif;
     font-size: 50pt;
     border: 5px solid black;
+    /* pixel = picture cell */
     margin-top: 0;
 }
 th {
