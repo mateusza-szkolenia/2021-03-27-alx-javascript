@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
@@ -22,36 +22,7 @@
     <p>Zadanie: w przypadku osoby niepełnoletniej ma się wyświetlić
         w którym roku i za ile lat uzyska pełnoletność.</p>
 
-    <script>
-        function przelicz(){
-            rokur = parseInt(document.querySelector("#rokur").value);
-            rokbiez = 2021;
-
-            wiek = rokbiez - rokur;
-            kpos = wiek >= 21;
-            ksen = wiek >= 30;
-            kpre = wiek >= 35;
-
-            rokpeln = rokur + 18;
-            ilepeln = rokpeln - rokbiez;
-
-            document.querySelector("#wiek").value = wiek;
-
-            if (wiek >= 18){
-                document.querySelector("#peln").value = "pełnoletni";
-            }
-            else {
-                document.querySelector("#peln").value =
-                    "niepełnoletni, osiągnie pełnoletność w "
-                    + rokpeln + ", czyli za " + ilepeln + " lat";
-            }
-
-            document.querySelector("#kpos").value = kpos;
-            document.querySelector("#ksen").value = ksen;
-            document.querySelector("#kpre").value = kpre;
-
-        }
-    </script>
+    <script src="nauka04.js"></script>
 
 </body>
 </html>
