@@ -32,9 +32,7 @@
             document.querySelector("#mies").value = miesiace[n];
             n++;
 
-            if (n == miesiace.length){
-                n = 0;
-            }
+            n %= miesiace.length;
         }
 
     </script>
