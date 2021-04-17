@@ -14,11 +14,11 @@
 
     <script>
         function policz(){
-            a = document.querySelector("#liczbaA").value;
-            b = document.querySelector("#liczbaB").value;
-            document.querySelector("#suma").value = a + b;
+            a = parseFloat(document.querySelector("#liczbaA").value);
+            b = parseFloat(document.querySelector("#liczbaB").value);
+            wynik = a + b;
+            document.querySelector("#suma").value = wynik.toFixed(2);
         }
-
 
     </script>
 
