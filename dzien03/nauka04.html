@@ -19,7 +19,8 @@
 
     <button onclick='przelicz()' id='przelicz'>Sprawdź</button>
 
-    <p>Zadanie: w przypadku osoby niepełnoletniej ma się wyświetlić w którym roku i za ile lat uzyska pełnoletniość.</p>
+    <p>Zadanie: w przypadku osoby niepełnoletniej ma się wyświetlić
+        w którym roku i za ile lat uzyska pełnoletność.</p>
 
     <script>
         function przelicz(){
@@ -31,13 +32,18 @@
             ksen = wiek >= 30;
             kpre = wiek >= 35;
 
+            rokpeln = rokur + 18;
+            ilepeln = rokpeln - rokbiez;
+
             document.querySelector("#wiek").value = wiek;
 
             if (wiek >= 18){
                 document.querySelector("#peln").value = "pełnoletni";
             }
             else {
-                document.querySelector("#peln").value = "niepełnoletni";
+                document.querySelector("#peln").value =
+                    "niepełnoletni, osiągnie pełnoletność w "
+                    + rokpeln + ", czyli za " + ilepeln + " lat";
             }
 
             document.querySelector("#kpos").value = kpos;
