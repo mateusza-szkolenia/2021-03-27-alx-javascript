@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kalkulator wieku</h1>
+
+    <p>Rok urodzenia: <input id='rokur'></p>
+
+    <p>wiek:               <output id='wiek'></output></p>
+    <p>pełnoletni:         <output id='peln'></output></p>
+    <p>czy na posła:       <output id='kpos'></output></p>
+    <p>czy na senatora:    <output id='ksen'></output></p>
+    <p>czy na prezydenta:  <output id='kpre'></output></p>
+
+    <button onclick='przelicz()' id='przelicz'>Sprawdź</button>
+
+    <script>
+        function przelicz(){
+            rokur = parseInt(document.querySelector("#rokur").value);
+            rokbiez = 2021;
+
+            wiek = rokbiez - rokur;
+            peln = wiek >= 18;
+            kpos = wiek >= 21;
+            ksen = wiek >= 30;
+            kpre = wiek >= 35;
+
+            document.querySelector("#wiek").value = wiek;
+            document.querySelector("#peln").value = peln;
+            document.querySelector("#kpos").value = kpos;
+            document.querySelector("#ksen").value = ksen;
+            document.querySelector("#kpre").value = kpre;
+
+        }
+    </script>
+
+</body>
+</html>
