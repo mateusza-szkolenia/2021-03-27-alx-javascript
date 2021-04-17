@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mies {
+            display: block;
+            width: 16em;
+            outline: 1px solid red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div style='display: flex;'>
+    <output id='mies'>XXXX</output> <button onclick='nastepny()'>następny</button>
+    </div>
+
+    <script>
+        miesiace = [
+                    "styczeń", "luty", "marzec", "kwiecień",
+                    "maj", "czerwiec", "lipiec", "sierpień",
+                    "wrzesień", "październik", "listopad", "grudzień"
+                ];
+        n = 0;
+
+        function nastepny(){
+            document.querySelector("#mies").value = miesiace[n];
+            n = n + 1;
+            if (n == miesiace.length){
+                n = 0;
+            }
+        }
+
+    </script>
+</body>
+</html>
