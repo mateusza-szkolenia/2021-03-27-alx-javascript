@@ -12,6 +12,8 @@
 
     <h1>Witaj, XXX!</h1>
 
+    <p>Twoje imię ma <output id='ileliter'>X</output> liter.</p>
+
     <script>
         function wit(){
             var imie = document.querySelector("#imie").value;
@@ -19,9 +21,20 @@
             if (imie == "Mateusz"){
                 document.querySelector('h1').textContent = "Witaj, Mistrzu!";
             }
-            else {
-                document.querySelector('h1').textContent = "Witaj, " + imie + "u!";
+            else if (imie.length == 0) {
+                document.querySelector('h1').textContent = "Witaj, nieznajomy!";
             }
+            else {
+                if (imie.substr(-1) == "a"){
+                    document.querySelector('h1').textContent = "Witaj, " 
+                    + imie.substr(0, imie.length-1) + "o!";
+                }
+                else {
+                    document.querySelector('h1').textContent = "Witaj, " + imie + "u!";
+                }
+            }
+
+            document.querySelector("#ileliter").value = imie.length;
         }
 
     </script>
