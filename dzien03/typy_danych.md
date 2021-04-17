@@ -12,6 +12,11 @@ W innych językach programowania istnieje podział na dwa rodzaje typów liczbow
 - **integer** - całkowity (np. `-5`, `0`, `100`)
 - **floating point**, **float** - zmiennoprzecinkowy (np. `1.5`)
 
+#### konwersja
+Z liczby na string: `a.toString()` lub `a.toFixed(2)`
+
+Ze stringa na liczbę: `parseInt(a)` lub `parseFloat(a)`
+
 ### string (łańcuch tekstowy)
 Potocznie: tekst, napis
 
