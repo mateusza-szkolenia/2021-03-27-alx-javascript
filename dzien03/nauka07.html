@@ -17,13 +17,17 @@
         #iledni {
             width: 3em;
         }
+        #kd {
+            width: 5em;
+        }
     </style>
 </head>
 <body>
     
     <div style='display: flex;'>
     <output id='mies'>XXXX</output>
-    <output id='iledni'>XXXX</output>
+    <output id='iledni'>XX</output>
+    <output id='kd'>XX</output>
     <button onclick='nastepny()'>następny</button>
     </div>
 
@@ -39,6 +43,12 @@
         function nastepny(){
             document.querySelector("#mies").value = miesiace[n];
             document.querySelector("#iledni").value = dlugosci[n];
+            if (dlugosci[n] == 31){
+                document.querySelector("#kd").value = "długi";
+            }
+            else {
+                document.querySelector("#kd").value = "krótki";
+            }
             n++;
 
             n %= miesiace.length;
