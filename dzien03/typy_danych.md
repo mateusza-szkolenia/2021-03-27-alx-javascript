@@ -27,3 +27,9 @@ np.
 * `"100.00 PLN"`
 * `"Szkolenie Javascript"`
 * `'Szkolenie Javascript'`
+
+### boolean
+inaczej: wartości logiczne, boolowskie
+
+* `true`
+* `false`
