@@ -17,18 +17,13 @@
         <p>podatek VAT: <output id='pV'></output></p>
         <button onclick='przelicz()'>Przelicz</button>
 
-        <p><del>Zadanie: dopisać obliczanie wysokości podatku VAT oraz wyświetlić obliczoną wartość.</del></p>
-        <p><del>Zadanie: dopisać wyświetlanie ceny netto i podatku na stronie HTML</del></p>
+        <p>Zadanie: dopisać pole formularza <b>sztuki</b> i policzyć wartość całkowitą (netto i brutto)</p>
+
         <script>
             function przelicz(){
                 cenaNetto = document.querySelector("#cn").value;
                 cenaBrutto = cenaNetto * 1.23;
                 podatekVAT = cenaBrutto - cenaNetto;
-
-                console.log("Mój pierwszy skrypt JS");
-                console.log(cenaNetto);
-                console.log(cenaBrutto);
-                console.log(podatekVAT);
 
                 document.querySelector("#cb").value = cenaBrutto;
                 document.querySelector("#pV").value = podatekVAT;
