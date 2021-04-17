@@ -60,6 +60,18 @@ miesiace[3]
 
 **Uwaga! Elementy są numerowane od zera `0`**
 
+```javascript
+tydzien = ['poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota', 'niedziela' ]
+```
+
+| pozycja | wartośc       |
+|---------|---------------|
+| `0`     | `poniedziałek`|
+| `1`     | `wtorek`      |
+| `2`     | `środa`       |
+| *itd*   |               |
+| `6`     | `niedziela`   |
+
 #### własności
 - długość: `oceny.length`
 
