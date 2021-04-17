@@ -3,11 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <title>Nauka 01</title>
+        <style>
+            output {
+                outline: 1px solid red;
+            }
+        </style>
     </head>
     <body>
         <h1>Nauka 01</h1>
 
+        <p>Cena brutto: <output id='cb'></output></p>
+
         <p><del>Zadanie: dopisać obliczanie wysokości podatku VAT oraz wyświetlić obliczoną wartość.</del></p>
+        <p>Zadanie: dopisać wyświetlanie ceny netto i podatku na stronie HTML</p>
         <script>
             cenaNetto = 180;
             cenaBrutto = cenaNetto * 1.23;
@@ -17,6 +25,8 @@
             console.log(cenaNetto);
             console.log(cenaBrutto);
             console.log(podatekVAT);
+
+            document.querySelector("#cb").value = cenaBrutto;
 
         </script>
 
