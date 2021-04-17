@@ -53,6 +53,13 @@ np.
 * `[5, "alamakota", false, 78]` - tablica z wartościami różnych typów
 * `[100, [3,4,5,6], ["styczeń", "luty", "marzec"]]` - tablica z zagnieżdżonymi tablicami
 
+Wyciąganie elementu ze wskazanej pozycji:
+```javascript
+miesiace[3]
+```
+
+**Uwaga! Elementy są numerowane od zera `0`**
+
 #### własności
 - długość: `oceny.length`
 
