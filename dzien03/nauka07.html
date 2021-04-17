@@ -6,18 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #mies {
+        output {
             display: block;
-            width: 16em;
             outline: 1px solid red;
             text-align: center;
+        }
+        #mies {
+            width: 10em;
+        }
+        #iledni {
+            width: 3em;
         }
     </style>
 </head>
 <body>
     
     <div style='display: flex;'>
-    <output id='mies'>XXXX</output> <button onclick='nastepny()'>następny</button>
+    <output id='mies'>XXXX</output>
+    <output id='iledni'>XXXX</output>
+    <button onclick='nastepny()'>następny</button>
     </div>
 
     <script>
@@ -26,10 +33,12 @@
                     "maj", "czerwiec", "lipiec", "sierpień",
                     "wrzesień", "październik", "listopad", "grudzień"
                 ];
+        dlugosci = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
         n = 0;
 
         function nastepny(){
             document.querySelector("#mies").value = miesiace[n];
+            document.querySelector("#iledni").value = dlugosci[n];
             n++;
 
             n %= miesiace.length;
