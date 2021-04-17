@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nauka 03</title>
+</head>
+<body>
+    <p>A: <input id='liczbaA'></p>
+    <p>B: <input id='liczbaB'></p>
+    <p>suma: <output id='suma'></output></p>
+    <p><button onclick='policz()'>SUMA</button></p>
+
+    <script>
+        function policz(){
+            a = document.querySelector("#liczbaA").value;
+            b = document.querySelector("#liczbaB").value;
+            document.querySelector("#suma").value = a + b;
+        }
+
+
+    </script>
+
+</body>
+</html>
