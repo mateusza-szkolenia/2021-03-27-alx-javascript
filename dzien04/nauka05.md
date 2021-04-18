@@ -7,6 +7,7 @@ Zrobić stronę, na której znajduje się przycisk `rzuć kostką`. Po naciśni
 ```
 ⚀ ⚁ ⚂ ⚃ ⚄ ⚅
 ```
+źródło: http://xahlee.info/comp/unicode_games_cards.html
 
 ## Przydatne funkcje:
 - `Math.floor(liczba)`
