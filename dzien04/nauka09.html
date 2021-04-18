@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Przykład</h1>
+
+    <p>Podaj słowo: <input id='slowo'></p>
+    <button onclick='dodaj_btn()'>dodaj</button>
+
+    <ul id='lista-slow'>
+    </ul>
+
+    <script>
+        function dodaj_btn(){
+            var s = document.querySelector('#slowo').value;
+
+            dodaj_slowo(s); // wywołanie (uruchomienie) funkcji
+        }
+
+        // definicja funkcji
+        function dodaj_slowo(slowo){
+            document.querySelector('#lista-slow').innerHTML += '<li>' + slowo + " (" + slowo.length + ")</li>";
+        }
+
+    </script>
+</body>
+</html>
