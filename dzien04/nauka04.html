@@ -7,15 +7,35 @@
     <title>Document</title>
 </head>
 <body>
+    <button onclick="akcja1()">akcja 1 - ustaw tytuł na &lt;u&gt;super strona...</button><br>
+    <button onclick="akcja2()">akcja 2 - ustaw tytuł na podkreślone "super strona"</button><br>
+
+    <button onclick="akcja3()">akcja 3 - dodaj coś do listy zakupów</button><br>
+    <button onclick="akcja4()">akcja 4 - wyczyść listę zakupów</button><br>
+
     <h1>Jakiś tytuł</h1>
 
-
-    <button onclick="akcja1()">akcja 1 - ustaw tytuł na &lt;u&gt;super strona...</button><br>
-    <button onclick="akcja2()">akcja 2</button><br>
+    <h2>zakupy</h2>
+    <ul id='listazakupow'>
+    </ul>
 
     <script>
         function akcja1(){
             document.querySelector("h1").textContent = "<u>super strona</u>";
+        }
+
+        function akcja2(){
+            document.querySelector("h1").innerHTML = "<u>super</u> strona";
+            /* modyfikujemy wewnętrzny kod HTML, a więc tworzymy element <u> ze wskazaną treścią */
+        }
+
+        function akcja3(){
+            var n = Math.random();
+            document.querySelector("#listazakupow").innerHTML += "<li>czekolada " + n.toFixed(2) + "kg </li>";
+        }
+
+        function akcja4(){
+            document.querySelector("#listazakupow").innerHTML = "";
         }
     </script>
 
