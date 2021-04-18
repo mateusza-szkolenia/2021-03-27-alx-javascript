@@ -6,7 +6,7 @@ Zrobić aplikację, w której podajemy liczbę (zmiennoprzecinkową) i po naciś
 - zaokrąglenie w górę
 
 Np.
-| liczba | `.round()` | `.floor()` | `.ceil()` |
+| liczba | `Math.round()` | `Math.floor()` | `Math.ceil()` |
 |--------|------------|------------|-----------|
 | `3.3`  | `3`        | `3`        | `4`       |
 | `7.5`  | `8`        | `7`        | `8`       |
