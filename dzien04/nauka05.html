@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        output#wynik {
+            font-size: 20em;
+        }
+    </style>
 </head>
 <body>
     <h1>Rzut kostką</h1>
 
-    <button onclick='rzut()'>Rzucaj</button>
+    <output id='wynik'>X</output><br>
 
-    <output id='wynik'>X</output>
+    <button onclick='rzut()'>Rzucaj</button>
 
     <script>
         function rzut(){
             var w = Math.floor(Math.random() * 6) + 1;
-            document.querySelector("#wynik").value = w;
+            var scianki = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+            document.querySelector("#wynik").value = scianki[w-1];
         }
     </script>
 
