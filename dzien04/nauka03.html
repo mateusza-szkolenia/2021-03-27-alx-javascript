@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Przykład</h1>
+
+    <!-- poniższy kod HTML ma pewne niedoróbki, które zostaną skorygowane przez przeglądarkę:
+    - brak encji dla symbolu & w linii Batman i Robin
+    - brak encji dla symbolu > w linii <img>
+    - brak niektórych tagów zamykających w tabeli
+    - brak cudzysłowu w atrybucie title w tabeli
+    - brak tagów zamykających elementy listy w liniach "ala ma kota" i kolejnej
+    -->
+    <div id='cokolwiek'>
+        <ul>
+            <li>Tom &amp; Jerry</li>
+            <li>Batman & Robin</li>
+            <li>Znacznik HTML-a: &lt;html&gt;</li>
+            <li>Znacznik obrazka &lt;img> </li>
+            <li>Podkreślenie: <u>tekst podkreślony</u></li>
+            <li>
+                <table title=zarobki>
+                    <tr><td>xxxxx <td>yyyyy
+                    <tr><td>123123
+                    <tr><td>asd
+                </table>
+            </li>
+            <li title='kot lubi <HTML> i Tom & Jerry'>ala ma kota 
+            <li title='pies "Burek"'>ola ma psa
+
+        </ul>
+    </div>
+
+    <p>Spójrz w konsolę!</p>
+
+    <script>
+        console.log(document.querySelector("#cokolwiek").innerHTML)
+    </script>
+
+</body>
+</html>
