@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-    <h1>Rzut kostką</h1>
+    <h1>Rzut kostką v2</h1>
 
     <output id='wynik'>X</output><br>
 
@@ -21,7 +21,7 @@
     <script>
         function rzut(){
             var w = Math.floor(Math.random() * 6) + 1;
-            var scianki = "⚀ ⚁ ⚂ ⚃ ⚄ ⚅".split(" ");
+            var scianki = "⚀⚁⚂⚃⚄⚅";
             document.querySelector("#wynik").value = scianki[w-1];
         }
     </script>
