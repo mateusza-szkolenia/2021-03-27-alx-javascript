@@ -69,3 +69,33 @@ Wyświetli tabelę typu:
 | k |  2 | ...   |
 *itd*
 
+## Oszukany rzut kostką
+
+Napisać aplikację do wirtualnego rzutu kostką, ale posiadającą ukrytą funkcjonalność pozwalającą oszukiwać - po wykonaniu przez użytkownika tajnego ruchu program w kolejnym rzucie ma zawsze zwracać `6`.
+
+## Statystyki rzutu kostką
+
+Napisać aplikację, która zasymuluje rzut kilkoma kostkami `6`-ściennymi (np. `4`) i poda sumaryczny wynik.
+
+Przykład:
+
+Rzucamy `4` kośćmi i wychodzą wartości: `4`, `3`, `1`, `6`, więc suma to `4+3+1+6 = 14`.
+
+Zasymulować dużą liczbę takich rzutów (np. `100000`) i wygenerować wykres z uzyskanymi wynikami.
+
+## Lotto
+
+Zasymulować `100000` losowych kuponów Lotto. Policzyć ile kuponów trafiło trójkę, czwórkę, piątkę i szóstkę. Sprawdzić, czy otrzymane liczby są zgodne z [teoretycznymi prawdopodobieństwami](https://pl.wikipedia.org/wiki/Lotto_(gra_liczbowa)#Prawdopodobie%C5%84stwo_trafienia_w_Lotto).
+
+## Tabliczka mnożenia
+
+Stworzyć stronę wyświetlającą tabliczkę mnożenia.
+
+## Liczby pierwsze
+
+### Test
+Napisać aplikację, która sprawdza, czy dana [liczba jest pierwsza](https://pl.wikipedia.org/wiki/Liczba_pierwsza).
+
+### Sito Eratostenesa
+Napisać aplikację, która generuje listę liczb pierwszych metodą [Sita Eratostenesa](https://pl.wikipedia.org/wiki/Sito_Eratostenesa).
+
