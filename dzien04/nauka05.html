@@ -8,21 +8,48 @@
     <style>
         output#wynik {
             font-size: 20em;
+            cursor: default;
+        }
+        td, th {
+            border: 1px solid #000;
+            padding: 5px;
+        }
+        main {
+            width: 400px;
+            margin: auto;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>Rzut kostką v2</h1>
+        <main>
+        <h1>Rzut kostką v2</h1>
 
-    <output id='wynik'>X</output><br>
+        <button onclick='rzut()'>
+        <output id='wynik' >X</output>
+        </button>
 
-    <button onclick='rzut()'>Rzucaj</button>
-
+        <table>
+            <tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+            <tr>
+                <td id='o1'>x</td>
+                <td id='o2'>x</td>
+                <td id='o3'>x</td>
+                <td id='o4'>x</td>
+                <td id='o5'>x</td>
+                <td id='o6'>x</td>
+            </tr>
+        </table>
+    </main>
     <script>
+        licznik = [0, 0, 0, 0, 0, 0];
+
         function rzut(){
             var w = Math.floor(Math.random() * 6) + 1;
             var scianki = "⚀⚁⚂⚃⚄⚅";
             document.querySelector("#wynik").value = scianki[w-1];
+            licznik[w-1] += 1;
+            document.querySelector("#o" + w).textContent = licznik[w-1];
         }
     </script>
 
