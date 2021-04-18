@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Liczby</h1>
+    <button onclick='akcja()'>Akcja</button>
+    <ul id='liczby'>
+    </ul>
+
+    <script>
+        function akcja(){
+            document.querySelector('#liczby').innerHTML += '<li>' + 100 + '</li>';
+        }
+    </script>
+</body>
+</html>
