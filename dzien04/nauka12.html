@@ -16,8 +16,10 @@
             var lista = document.querySelector('#zakupy');
             var nowy_elem = document.createElement('li');
             nowy_elem.textContent = "pepsi";
+            nowy_elem.setAttribute("title", "zakupy nr " + Math.floor(Math.random() * 100));
             lista.append(nowy_elem);
         }
+
     </script>
 </body>
 </html>
