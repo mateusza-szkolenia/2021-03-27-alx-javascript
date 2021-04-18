@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Jakiś tytuł</h1>
+
+
+    <button onclick="akcja1()">akcja 1 - ustaw tytuł na &lt;u&gt;super strona...</button><br>
+    <button onclick="akcja2()">akcja 2</button><br>
+
+    <script>
+        function akcja1(){
+            document.querySelector("h1").textContent = "<u>super strona</u>";
+        }
+    </script>
+
+</body>
+</html>
