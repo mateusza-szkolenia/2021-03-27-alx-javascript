@@ -19,6 +19,16 @@
             margin: auto;
             text-align: center;
         }
+
+        tr#wykresy div {
+            outline: 1px solid red;
+            background-color: red;
+            width: 20px;
+        }
+
+        tr#wykresy td {
+            vertical-align: bottom;
+        }
     </style>
 </head>
 <body>
@@ -39,6 +49,14 @@
                 <td id='o5'>x</td>
                 <td id='o6'>x</td>
             </tr>
+            <tr id='wykresy'>
+                <td id='w1'><div></div></td>
+                <td id='w2'><div></div></td>
+                <td id='w3'><div></div></td>
+                <td id='w4'><div></div></td>
+                <td id='w5'><div></div></td>
+                <td id='w6'><div></div></td>
+            </tr>
         </table>
     </main>
     <script>
@@ -50,6 +68,10 @@
             document.querySelector("#wynik").value = scianki[w-1];
             licznik[w-1] += 1;
             document.querySelector("#o" + w).textContent = licznik[w-1];
+
+            //                     "#w3 span"
+            document.querySelector("#w" + w + " div").style.height = licznik[w-1] * 5 + "px";
+
         }
     </script>
 
