@@ -7,6 +7,7 @@
     <title>Document</title>
     <style>
         td, th { border: 1px solid black; }
+        td span { border: 1px solid black; margin: 3px; padding: 2px; }
     </style>
 </head>
 <body>
@@ -16,6 +17,7 @@
         <tr>
             <th>nazwa miesiąca</th>
             <th>ile dni</th>
+            <th>dni</th>
         </tr>
     </table>
 
@@ -44,8 +46,16 @@
             kom1.textContent = miesiace[i];
             var kom2 = document.createElement('td');
             kom2.textContent = dlugosci[i];
+            var kom3 = document.createElement('td');
+            for (var j=1; j<=dlugosci[i]; j++){
+                var dzien = document.createElement('span');
+                dzien.textContent = j;
+                kom3.append(dzien);
+            }
+
             wiersz.append(kom1);
             wiersz.append(kom2);
+            wiersz.append(kom3);
             kalendarz.append(wiersz);
         }
 
