@@ -99,3 +99,17 @@ Napisać aplikację, która sprawdza, czy dana [liczba jest pierwsza](https://pl
 ### Sito Eratostenesa
 Napisać aplikację, która generuje listę liczb pierwszych metodą [Sita Eratostenesa](https://pl.wikipedia.org/wiki/Sito_Eratostenesa).
 
+## Dekoder PESEL
+
+Napisać aplikację, która na podstawie podanego numeru PESEL podaje:
+- datę urodzenia
+- płeć
+Oraz sprawdza, czy dany [numer PESEL](https://pl.wikipedia.org/wiki/PESEL) jest poprawny.
+
+## Temperatury
+
+Napisać aplikację do przeliczania [temperatur między różnymi skalami](https://pl.wikipedia.org/wiki/Skala_termometryczna):
+- Celsjusza
+- Fahrenheita
+- Kelvina
+- Rankine
