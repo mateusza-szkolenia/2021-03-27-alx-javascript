@@ -7,3 +7,7 @@ Zrobić stronę, na której znajduje się przycisk `rzuć kostką`. Po naciśni
 ```
 ⚀ ⚁ ⚂ ⚃ ⚄ ⚅
 ```
+
+## Przydatne funkcje:
+- `Math.floor(liczba)`
+- `Math.random()`
