@@ -14,8 +14,8 @@
 
     <table id='kalendarz'>
         <tr>
-            <th>nazwa</th>
-            <th>długość</th>
+            <th>nazwa miesiąca</th>
+            <th>ile dni</th>
         </tr>
     </table>
 
@@ -37,7 +37,16 @@
         dlugosci = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
         for (var i=0; i < 12; i++){
-            document.querySelector('#kalendarz').innerHTML += '<tr><td>' + miesiace[i] + '</td><td>' + dlugosci[i] + '</td></tr>';
+            var kalendarz = document.querySelector('#kalendarz');
+            
+            var wiersz = document.createElement('tr');
+            var kom1 = document.createElement('td');
+            kom1.textContent = miesiace[i];
+            var kom2 = document.createElement('td');
+            kom2.textContent = dlugosci[i];
+            wiersz.append(kom1);
+            wiersz.append(kom2);
+            kalendarz.append(wiersz);
         }
 
     </script>
