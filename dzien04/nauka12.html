@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick='dodaj_btn()'>Dodaj zakup</button>
+    <ul id='zakupy'>
+    </ul>
+
+    <script>
+        function dodaj_btn(){
+            var lista = document.querySelector('#zakupy');
+            var nowy_elem = document.createElement('li');
+            nowy_elem.textContent = "pepsi";
+            lista.append(nowy_elem);
+        }
+    </script>
+</body>
+</html>
