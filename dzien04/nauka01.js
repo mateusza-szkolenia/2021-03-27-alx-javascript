@@ -3,6 +3,15 @@ skrypt JS podmieniający zawartość dwóch akapitów
 
 autor: Mateusz A. (ALX) m.adamowski@alx.pl
 data: 2021-04-18
+
+komentarze w JS mają składnię taką samą jak w językach:
+- C
+- C++
+- C#
+- Java
+- PHP
+- i innych
+
 */
 
 
