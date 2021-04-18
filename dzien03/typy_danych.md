@@ -78,3 +78,10 @@ tydzien = ['poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota',
 #### metody
 - dopisz element na końcu: `oceny.push(1)`
 - znajdź pozycję: `miesiace.indexOf('lip')` - zwraca pozycję lub `-1` jeśli nie znaleziono
+
+#### konwersja
+- podzielenie napisu na tablicę napisów: `napis.split(" ")`
+  ```javascript
+  var napis = "Ala ma kota a kot ma pchły"
+  var slowa = napis.split(" ")
+  ```
