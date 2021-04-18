@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #lista-slow div {
+            border: 2px dotted green; padding: 10px; margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Przykład</h1>
@@ -12,8 +17,8 @@
     <p>Podaj słowo: <input id='slowo'></p>
     <button onclick='dodaj_btn()'>dodaj</button>
 
-    <ul id='lista-slow'>
-    </ul>
+    <div id='lista-slow'>
+    </div>
 
     <script>
         function dodaj_btn(){
@@ -22,9 +27,10 @@
             dodaj_slowo(s); // wywołanie (uruchomienie) funkcji
         }
 
-        // definicja funkcji
+        // definicja funkcji z 1 parametrem
+        // slowo - parametr - jak zmienna lokalna przekazana z zewnątrz
         function dodaj_slowo(slowo){
-            document.querySelector('#lista-slow').innerHTML += '<li>' + slowo + " (" + slowo.length + ")</li>";
+            document.querySelector('#lista-slow').innerHTML += '<div>' + slowo + " (" + slowo.length + ")</div>";
         }
 
     </script>
