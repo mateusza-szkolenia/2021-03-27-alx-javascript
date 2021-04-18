@@ -35,6 +35,11 @@
                     "wrzesień", "październik", "listopad", "grudzień"
                 ];
         dlugosci = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        for (var i=0; i < 12; i++){
+            document.querySelector('#kalendarz').innerHTML += '<tr><td>' + miesiace[i] + '</td><td>' + dlugosci[i] + '</td></tr>';
+        }
+
     </script>
 
 </body>
