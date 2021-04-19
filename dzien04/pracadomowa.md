@@ -69,6 +69,14 @@ Wyświetli tabelę typu:
 | k |  2 | ...   |
 *itd*
 
+Uwaga, do wykonania zadania przydatne będą dwie funkcje, służące do zamiany znaku na jego kod ASCII/Unicode, których jeszcze nie omawialiśmy:
+```javascript
+var znak = "a";
+
+znak.charCodeAt(0);         // zwraca liczbę 97
+String.fromCharCode(97);    // zwraca literę "a"
+```
+
 ## Oszukany rzut kostką
 
 Napisać aplikację do wirtualnego rzutu kostką, ale posiadającą ukrytą funkcjonalność pozwalającą oszukiwać - po wykonaniu przez użytkownika tajnego ruchu program w kolejnym rzucie ma zawsze zwracać `6`.
@@ -86,6 +94,13 @@ Zasymulować dużą liczbę takich rzutów (np. `100000`) i wygenerować wykres 
 ## Lotto
 
 Zasymulować `100000` losowych kuponów Lotto. Policzyć ile kuponów trafiło trójkę, czwórkę, piątkę i szóstkę. Sprawdzić, czy otrzymane liczby są zgodne z [teoretycznymi prawdopodobieństwami](https://pl.wikipedia.org/wiki/Lotto_(gra_liczbowa)#Prawdopodobie%C5%84stwo_trafienia_w_Lotto).
+
+Uwaga, do wykonania zadania przydatna może być pętla `while`, której jeszcze nie omawialiśmy:
+```javascript
+while(warunek){
+  operacje...
+}
+```
 
 ## Tabliczka mnożenia
 
