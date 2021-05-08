@@ -17,9 +17,17 @@
     //  for (var i=0; i<zakupy.length; i++){
 
     // pętla "foreach" albo "for each"
+    // przechodzi po wszystkich wartościach z tablicy
         for (var produkt of zakupy){
             var item = document.createElement('li')
             item.textContent = produkt
+            document.querySelector('#lista-zak').append(item)
+        }
+    // pętla for-in
+    // przechodzi po wszystkich indeksach (kluczach)
+        for (var pozycja in zakupy){
+            var item = document.createElement('li')
+            item.textContent = "numerek " + pozycja
             document.querySelector('#lista-zak').append(item)
         }
     </script>
