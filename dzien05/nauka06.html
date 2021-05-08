@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Zwierzęta</h1>
+
+    <output id='zw'></output>
+
+    <script>
+        function czy_wiecej_niz_3_litery(slowo){
+            return slowo.length > 3
+        }
+
+        var zwierzeta = [
+            'jak', 'ćma', 'wąż', 'pająk', 'mysz', 'koń', 'słoń', 'tygrys',
+            'lew', 'pies', 'kot', 'hipopotam', 'małpa', 'ptak'
+        ]
+
+        var zwierzeta2 = []
+        for (var zwierz of zwierzeta){
+            if (! czy_wiecej_niz_3_litery(zwierz)) continue;   // przeskocz zwierzęta na 3 litery
+
+            zwierzeta2.push(zwierz)
+        }
+
+        document.querySelector('#zw').value = zwierzeta2
+
+    </script>
+
+</body>
+</html>
