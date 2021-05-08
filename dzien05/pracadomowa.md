@@ -22,6 +22,13 @@ Rozbudować istniejący skrypt wyświetlający uczniów o następujące funkcje
 - Policzenie ile razy występuje jakie imię
     - Maciej: 3, Barbara: 2 *itd* (w postaci listy lub tabelki wg uznania)
 
+Wygenerować osobne listy:
+- listę uczniów z czerownym paskiem
+- listę uczniów ze średnią niższą niż 3.00
+- listę uczniów mających co najmniej jedną 6
+- listę uczniów mających co najmniej dwie jedynki
+- *itd*
+
 ### Osoby
 
 W oparciu o dane wygenerowane pod adresem: https://mateusza2.github.io/Programowanie/Generatory/osoby.html#generated-JSON stworzyć listę osób. Dla każdej osoby policzyć:
