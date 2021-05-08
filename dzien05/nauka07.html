@@ -20,11 +20,7 @@
             -5, -3, 0, 2, 7, 9, 13, 15.5, 20, 23, 21.5, 19, 15, 12, 8, 4, 3, 0, -1
         ]
 
-        var pomiary_F = []
-
-        for (var p of pomiary_C){
-            pomiary_F.push(przelicz_C_na_F(p))
-        }
+        var pomiary_F = pomiary_C.map(przelicz_C_na_F)
 
         document.querySelector('#pom').value = pomiary_F
 
