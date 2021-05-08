@@ -1,7 +1,7 @@
 function przelicz_btn(){
 
     var liczby = document.querySelector('#tempC').value.split("\n")
-    var tabelka = document.querySelector('#tabelka-wynikowa')
+    var tabelka = document.querySelector('#tabelka-wynikowa tbody')
 
     for (var i=0; i<liczby.length; i++){
         var wiersz = document.createElement("tr")
