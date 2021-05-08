@@ -16,17 +16,16 @@
             return slowo.length > 3
         }
 
+        function czy_nie_zaczyna_sie_na_m(slowo){
+            return slowo[0] != 'm'
+        }
+
         var zwierzeta = [
+            'lew', 'pies', 'kot', 'hipopotam', 'małpa', 'ptak',
             'jak', 'ćma', 'wąż', 'pająk', 'mysz', 'koń', 'słoń', 'tygrys',
-            'lew', 'pies', 'kot', 'hipopotam', 'małpa', 'ptak'
         ]
 
-        var zwierzeta2 = []
-        for (var zwierz of zwierzeta){
-            if (! czy_wiecej_niz_3_litery(zwierz)) continue;   // przeskocz zwierzęta na 3 litery
-
-            zwierzeta2.push(zwierz)
-        }
+        var zwierzeta2 = zwierzeta.filter(czy_wiecej_niz_3_litery).filter(czy_nie_zaczyna_sie_na_m)
 
         document.querySelector('#zw').value = zwierzeta2
 
