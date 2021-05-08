@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pętla for()</h1>
+
+    <ul id='lista-zak'></ul>
+
+    <script>
+        var zakupy = ['chleb', 'mąka', 'ser', 'cola', 'czekolada'];
+
+        for (var i=0; i<zakupy.length; i++){
+            var item = document.createElement('li')
+            item.textContent = zakupy[i]
+            document.querySelector('#lista-zak').append(item)
+        }
+    </script>
+
+</body>
+</html>
