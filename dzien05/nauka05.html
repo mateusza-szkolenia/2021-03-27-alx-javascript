@@ -27,6 +27,15 @@
         </tbody>
     </table>
     <script>
+        function srednia_ocen(o){
+            var suma = 0;
+            for (var ocena of o){
+                suma += ocena
+            }
+            return suma/o.length
+        }
+
+
         var lista_uczniow = document.querySelector('#ucz')
         for (var uczen of uczniowie){
             var wiersz = document.createElement('tr')
@@ -35,6 +44,17 @@
                 kom.textContent = uczen[x]
                 wiersz.append(kom)
             }
+            var oceny = uczen["oceny"].split(" ")
+            
+            for(var i=0; i<oceny.length; i++){
+                oceny[i] = parseInt(oceny[i])
+            }
+
+            var kom = document.createElement('td')
+            kom.textContent = srednia_ocen(oceny).toFixed(2)
+            wiersz.append(kom)
+
+            //console.log(oceny, srednia_ocen(oceny))
             lista_uczniow.append(wiersz)
         }
         
