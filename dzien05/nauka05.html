@@ -15,7 +15,7 @@
     <script src='uczniowie.js'></script>
 </head>
 <body>
-    <table id='zam'>
+    <table id='ucz'>
         <thead>
             <tr>
                 <th>imie</th>
@@ -27,7 +27,17 @@
         </tbody>
     </table>
     <script>
-        console.log(uczniowie)
+        var lista_uczniow = document.querySelector('#ucz')
+        for (var uczen of uczniowie){
+            var wiersz = document.createElement('tr')
+            for (var x in uczen){
+                var kom = document.createElement('td')
+                kom.textContent = uczen[x]
+                wiersz.append(kom)
+            }
+            lista_uczniow.append(wiersz)
+        }
+        
         // TODO:
         // Wyświetlić dane o uczniach w tabelce. Policzyć średnią ocen każdego ucznia.
     </script>
