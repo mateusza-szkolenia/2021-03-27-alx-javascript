@@ -2,6 +2,7 @@
 
 - `p && q` - koniunkcja (logiczne `ORAZ` ang: `AND`)
 - `p || q` - alternatywa (logiczne `LUB` ang: `OR`)
+- `! p` - negacja (logiczne `NIE` ang: `NOT`)
 
 ## przykład
 
@@ -14,6 +15,14 @@ if (x >= 3 && x <= 30){
 
 if (x < 0 || x > 100){
     console.log("x jest spoza zakresu 0..100")
+}
+
+if (! x > 100){ // nieprawda, że x większe od 100 => x mniejsze równe 100
+
+}
+
+if (!isNaN(x)){ // nieprawda, że x jest NaN (not a number)
+
 }
 ```
 
