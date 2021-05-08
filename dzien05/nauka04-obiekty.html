@@ -25,8 +25,19 @@
     <script>
         var zamowienie = [
             {"typ": "hawajska", "rozmiar": "mała", "cena": 19.99, "dodatki": []},
-            {"typ": "margerita", "rozmiar": "duża", "cena": 17.99, "dodatki": ["oliwki", "cebula"]}
+            {"typ": "margerita", "rozmiar": "duża", "cena": 17.99, "dodatki": ["oliwki", "cebula"]},
+            {"typ": "wegetariańska", "rozmiar": "malutka", "cena": 15.99, "dodatki":["kiełbasa"]}
         ]
+
+        var zam = document.querySelector('#zam')
+
+        for (var pizza of zamowienie){
+            var wiersz = document.createElement('tr')
+            var komT = document.createElement('td')
+            komT.textContent = pizza['typ']
+            wiersz.append(komT)
+            zam.append(wiersz)
+        }
     </script>
 </body>
 </html>
