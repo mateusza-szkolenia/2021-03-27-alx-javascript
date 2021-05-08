@@ -10,11 +10,15 @@ function przelicz_btn(){
         var komF = document.createElement("td")
         var komOpis = document.createElement("td")
     
-        var temperatura = liczby[i]
+        var temperatura = parseFloat(liczby[i])
+
+        if (isNaN(temperatura)){
+            continue
+        }
 
         komC.innerText = temperatura
-        komF.innerText = C_to_F(parseFloat(temperatura)).toFixed(1)
-        komOpis.innerText = odczucie_temperatury(parseFloat(temperatura))
+        komF.innerText = C_to_F(temperatura).toFixed(1)
+        komOpis.innerText = odczucie_temperatury(temperatura)
 
         wiersz.append(komC)
         wiersz.append(komF)
