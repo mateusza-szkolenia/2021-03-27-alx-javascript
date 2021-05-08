@@ -33,14 +33,32 @@
             if (ile==1){
                 return slowa[0];
             }
+            if (ile%100==12){
+                return slowa[2];
+            }
+            if (ile%100==13){
+                return slowa[2];
+            }
+            if (ile%100==14){
+                return slowa[2];
+            }
+            if (ile%10==2){
+                return slowa[1];
+            }
+            if (ile%10==3){
+                return slowa[1];
+            }
+            if (ile%10==4){
+                return slowa[1];
+            }
             
-            return slowa[1];
+            return slowa[2];
         }
     </script>
 
     <script>
         // to jest dodatkowy kod testująco-prezentujący rozwiązanie
-        for(var i=1; i<=10; i++){
+        for(var i=1000; i<=1100; i++){
             var lista = document.querySelector('#odmiana');
             var nowy_elem = document.createElement('li');
             nowy_elem.textContent = i + " " + odmien(i, ["cytryna", "cytryny", "cytryn"]);
