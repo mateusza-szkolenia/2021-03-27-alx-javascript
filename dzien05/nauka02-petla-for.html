@@ -12,11 +12,14 @@
     <ul id='lista-zak'></ul>
 
     <script>
-        var zakupy = ['chleb', 'mąka', 'ser', 'cola', 'czekolada'];
+        var zakupy = ['chleb', 'ryż', 'ser', 'cola', 'czekolada'];
 
-        for (var i=0; i<zakupy.length; i++){
+    //  for (var i=0; i<zakupy.length; i++){
+
+    // pętla "foreach" albo "for each"
+        for (var produkt of zakupy){
             var item = document.createElement('li')
-            item.textContent = zakupy[i]
+            item.textContent = produkt
             document.querySelector('#lista-zak').append(item)
         }
     </script>
