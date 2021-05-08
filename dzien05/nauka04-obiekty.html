@@ -36,6 +36,25 @@
             var komT = document.createElement('td')
             komT.textContent = pizza['typ']
             wiersz.append(komT)
+
+            var komR = document.createElement('td')
+            komR.textContent = pizza['rozmiar']
+            wiersz.append(komR)
+
+            var komC = document.createElement('td')
+            komC.textContent = pizza['cena']
+            wiersz.append(komC)
+
+            var komD = document.createElement('td')
+            var dod = document.createElement('ul')
+            for (var dodatek of pizza['dodatki']){
+                var d = document.createElement('li')
+                d.textContent = dodatek
+                dod.append(d)
+            }
+            komD.append(dod)
+            wiersz.append(komD)
+
             zam.append(wiersz)
         }
 
