@@ -14,6 +14,9 @@
         var zwierzeta = ['mysz', 'koń', 'słoń', 'tygrys', 'lew', 'pies', 'kot', 'hipopotam', 'małpa', 'ptak']
 
         for (var zwierz of zwierzeta){
+            if (zwierz.length == 3) continue;   // przeskocz zwierzęta na 3 litery
+            if (zwierz == 'hipopotam') break;   // zatrzymaj się na hipopotamie
+
             var item = document.createElement('li')
             item.textContent = zwierz
             document.querySelector('#lista-zw').append(item)
