@@ -11,9 +11,11 @@ Do pola użytkownik wpisuje listę liczb, np.
 24
 ```
 
+Liczby traktujemy jako temperatury w skali Celsjusza.
+
 Po naciśnięciu przycisku, ma się pojawić tabelka postaci:
 
-| C   | F    | opis   |
+| °C  | °F   | opis   |
 |-----|------|--------|
 |-4   | 24.8 | zimno  |
 |10   | 50   | chłodno|
