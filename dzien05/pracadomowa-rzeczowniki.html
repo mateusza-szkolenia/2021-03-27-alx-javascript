@@ -30,28 +30,15 @@
     <script>
         // to jest rozwiązanie zadania
         function odmien(ile, slowa){
-            if (ile==1){
-                return slowa[0];
-            }
-            if (ile%100==12){
-                return slowa[2];
-            }
-            if (ile%100==13){
-                return slowa[2];
-            }
-            if (ile%100==14){
-                return slowa[2];
-            }
-            if (ile%10==2){
-                return slowa[1];
-            }
-            if (ile%10==3){
-                return slowa[1];
-            }
-            if (ile%10==4){
-                return slowa[1];
-            }
-            
+            // mogę pominąć klamerki, jeśli mam dokładnie jedną instrukcję
+
+            if (ile==1) return slowa[0];
+            if (ile%100==12) return slowa[2];
+            if (ile%100==13) return slowa[2];
+            if (ile%100==14) return slowa[2];
+            if (ile%10==2) return slowa[1];
+            if (ile%10==3) return slowa[1];
+            if (ile%10==4) return slowa[1];
             return slowa[2];
         }
     </script>
