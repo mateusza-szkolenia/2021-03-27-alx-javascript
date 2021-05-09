@@ -8,12 +8,12 @@
 </head>
 <body>
     <p>Spójrz w konsolę</p>
-    
+
     <script>
         // konstruktor
-        function Prostokat(){
-            this.a = 10;
-            this.b = 20;
+        function Prostokat(szer, wys){
+            this.a = szer;
+            this.b = wys;
             this.pole = function(){
                 return this.a * this.b
             };
@@ -22,12 +22,12 @@
             };
             this.przekatna = function(){
                 return Math.sqrt(this.a * this.a + this.b * this.b)
-            }
+            };
         }
 
         // użycie
 
-        p1 = new Prostokat();
+        p1 = new Prostokat(100, 80);
         console.log(p1.pole())
         console.log(p1.obwod())
         console.log(p1.przekatna())
