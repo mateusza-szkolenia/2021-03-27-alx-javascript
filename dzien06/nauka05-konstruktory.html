@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Spójrz w konsolę</p>
+    
+    <script>
+        // konstruktor
+        function Prostokat(){
+            this.a = 10;
+            this.b = 20;
+            this.pole = function(){
+                return this.a * this.b
+            };
+            this.obwod = function(){
+                return 2 * this.a + 2 * this.b
+            };
+            this.przekatna = function(){
+                return Math.sqrt(this.a * this.a + this.b * this.b)
+            }
+        }
+
+        // użycie
+
+        p1 = new Prostokat();
+        console.log(p1.pole())
+        console.log(p1.obwod())
+        console.log(p1.przekatna())
+
+    </script>
+</body>
+</html>
