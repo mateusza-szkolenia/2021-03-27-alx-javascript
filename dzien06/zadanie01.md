@@ -14,3 +14,7 @@ Prostokat.pole() // zwraca 1200
 Prostokat.obwod() // zwraca 140
 Prostokat.przekatna() // zwraca 50
 ```
+
+## Podpowiedź:
+Pierwiastek kwadratowy: `Math.sqrt(81)`
+Podnoszenie do potęgi: `Math.pow(10, 2)`
