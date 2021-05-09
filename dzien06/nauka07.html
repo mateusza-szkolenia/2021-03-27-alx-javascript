@@ -43,19 +43,21 @@
             };
         }
 
-        function dopisz_komorke(tresc, wiersz){
-            var kom = document.createElement('td')
-            kom.textContent = tresc
-            wiersz.append(kom)
-        }
-
-        function dopisz_wiersz(komorki, tabelka){
-            var wiersz = document.createElement('tr');
-            komorki.forEach(k => dopisz_komorke(k, wiersz));
-            tabelka.append(wiersz);
-        }
+        
 
         function akcja_btn(){
+            function dopisz_komorke(tresc, wiersz){
+                var kom = document.createElement('td')
+                kom.textContent = tresc
+                wiersz.append(kom)
+            }
+
+            function dopisz_wiersz(komorki, tabelka){
+                var wiersz = document.createElement('tr');
+                komorki.forEach(k => dopisz_komorke(k, wiersz));
+                tabelka.append(wiersz);
+            }
+            
             tabelkaWynikowa.innerHTML = ""
 
             daneWejsciowe
