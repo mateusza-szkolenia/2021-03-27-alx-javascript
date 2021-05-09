@@ -46,13 +46,9 @@
             var prostokaty = daneWejsciowe
                 .value
                 .split("\n")
-                .map(function(x){return x.split(" ")})
-                .map(function(x){ 
-                    return x.map(function(y){ return parseFloat(y)})
-                })
-                .map(function(x){
-                    return new Prostokat(x[0], x[1])
-                })
+                .map(x => x.split(" "))
+                .map(x => x.map(y => parseFloat(y)))
+                .map(x => new Prostokat(x[0], x[1]))
 
             tabelkaWynikowa.innerHTML = ""
             for (var p of prostokaty){
