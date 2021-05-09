@@ -17,15 +17,20 @@
             this.BMI = function(){
                 return this.waga/(this.wzrost*this.wzrost)
             };
+            this.czy_BMI_ok = function(){
+                return this.BMI() >= 20 && this.BMI() <= 25
+            }
         }
 
         // użycie
 
         var o1 = new Osoba(70, 1.81);
         console.log("BMI tej osoby to:" + o1.BMI())
+        console.log("BMI ok?:" + o1.czy_BMI_ok())
 
-        var o2 = new Osoba(55, 1.59);
+        var o2 = new Osoba(100, 1.59);
         console.log("BMI tej osoby to:" + o2.BMI())
+        console.log("BMI ok?:" + o2.czy_BMI_ok())
 
     </script>
 </body>
