@@ -11,24 +11,23 @@
     <ul id='lz'></ul>
 
     <script>
-
-        function dodaj_zakup(nazwa){
-            var lista = document.querySelector('#lz')
-            var z = document.createElement('li')
-            z.textContent = nazwa
-            lista.append(z)
-        }
-
-        function wyczysc_liste(){
-            var lista = document.querySelector('#lz')
-            lista.innerHTML = ""
-        }
-
-        function usun_ostatni(){
-            //var lista = document.querySelector('#lz')
-            var ostatni = document.querySelector('#lz li:last-child')
-            ostatni.remove()
-            //lista.removeChild(ostatni)
+        var ListaZakupow = {
+            dodaj: function(nazwa){
+                var lista = document.querySelector('#lz')
+                var z = document.createElement('li')
+                z.textContent = nazwa
+                lista.append(z)
+            },
+            usun_ostatni: function(){
+                //var lista = document.querySelector('#lz')
+                var ostatni = document.querySelector('#lz li:last-child')
+                ostatni.remove()
+                //lista.removeChild(ostatni)
+            },
+            wyczysc: function(){
+                var lista = document.querySelector('#lz')
+                lista.innerHTML = ""
+            }
         }
 
     </script>
