@@ -9,20 +9,14 @@
 <body>
     <p>Otwórz konsolę</p>
     <script>
-        var imiona = ["Mateusz", "Zygmunt", "Andrzej", "Marcin", "Marian", "Marta", "Anna"]
+        var liczby = [1, 5, 10, 11, 111, 1001, 2000, 6, 6000]
 
-        // filtrowanie i mapowanie nie modyfikuje pierwotnej tablicy
-        var imionaM = imiona.filter(x => x[0] == "M")
-        var dlugosci = imiona.map(x => x.length)
+        liczby.sort()
 
-        // sortowanie modyfikuje pierwotną tablicę
-        // in-place (w miejscu)
-        var x = imiona.sort()
-
-        console.log(imiona)
-        console.log(imionaM)
-        console.log(dlugosci)
-        console.log(x)
+        console.log(liczby)
+        // zadziała źle
+        // kolejność leksykalna:
+        // 1, 10, 1001, 11, 111, 2000, 5, 6, 6000
 
     </script>
 </body>
