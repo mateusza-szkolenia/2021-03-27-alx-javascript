@@ -60,16 +60,13 @@
                 .filter(x => (x.pole() > 2000))
 
             tabelkaWynikowa.innerHTML = ""
-            for (var p of prostokaty){
-                var wiersz = document.createElement('tr');
 
+            prostokaty.forEach(p => {
+                var wiersz = document.createElement('tr');
                 [p.a, p.b, p.pole(), p.obwod(), p.przekatna().toFixed(1)]
                     .forEach(k => dopisz_komorke(k, wiersz));
-                    
-
-
                 tabelkaWynikowa.append(wiersz)
-            }
+            })
 
             console.log(prostokaty)
         }
