@@ -49,7 +49,9 @@
                 .split("\n")
                 .map(x => x.split(" "))
                 .map(x => x.map(y => parseFloat(y)))
+                .filter(x => !isNaN(x[0]) && !isNaN(x[1]))
                 .map(x => new Prostokat(x[0], x[1]))
+                .filter(x => (x.pole() > 2000))
 
             tabelkaWynikowa.innerHTML = ""
             for (var p of prostokaty){
