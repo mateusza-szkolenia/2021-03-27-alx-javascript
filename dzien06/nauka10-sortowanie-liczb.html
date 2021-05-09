@@ -9,9 +9,14 @@
 <body>
     <p>Otwórz konsolę</p>
     <script>
+
+        function porownaj(a, b){
+            return a - b
+        }
+
         var liczby = [1, 5, 10, 11, 111, 1001, 2000, 6, 6000]
 
-        liczby.sort()
+        liczby.sort(porownaj)
 
         console.log(liczby)
         // zadziała źle
