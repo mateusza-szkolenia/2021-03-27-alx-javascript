@@ -11,6 +11,7 @@
     
     <button onclick="akcja_btn()">Przetwarzaj</button>
     <br>
+    <p>Wpisz wymiary prostokątów. Każdy prostokąt to dwie liczby oddzielone spacją w nowej linii.</p>
     <textarea id='daneWejsciowe' cols=50 rows=10></textarea>
 
     <table border=1>
@@ -57,7 +58,7 @@
                 komorki.forEach(k => dopisz_komorke(k, wiersz));
                 tabelka.append(wiersz);
             }
-            
+
             tabelkaWynikowa.innerHTML = ""
 
             daneWejsciowe
