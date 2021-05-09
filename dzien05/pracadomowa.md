@@ -53,3 +53,13 @@ W oparciu o dane wygenerowanie pod adresem: https://mateusza2.github.io/Programo
 ### Wykresy
 
 Do powyższych zadań zrobić wykresy.
+
+### Miasta Polski
+
+Używając zbiór danych z adresu: `https://mateusza2.github.io/Programowanie/Zbiory_danych/polskie-miasta.json` stworzyć aplikację pozwalającą na:
+1. Wyszukanie miasta o podanej nazwie
+2. Wyszukanie 2 miast i obliczenie (przybliżonej) odległości między nimi.
+3. Wyszukanie miasta o podanaje nazwie i wszystkich miast we wskazanym promieniu.
+
+Do liczenie odległości na podstawie współrzędnych użyć [wzoru haversine](https://en.wikipedia.org/wiki/Haversine_formula)
+lub prostej aproksymacji zakładającej, że Ziemia jest lokalnie płaska.
