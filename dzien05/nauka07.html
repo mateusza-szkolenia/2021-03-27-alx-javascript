@@ -16,6 +16,10 @@
             return 1.8 * t + 32.0;
         }
 
+        function zaokraglenie(t){
+            return t.toFixed(0)
+        }
+
         var pomiary_C = [
             -5, -3, 0, 2, 7, 9, 13, 15.5, 20, 23, 21.5, 19, 15, 12, 8, 4, 3, 0, -1
         ]
@@ -23,6 +27,8 @@
         var pomiary_F = pomiary_C.map(przelicz_C_na_F)
 
         document.querySelector('#pom').value = pomiary_F
+            .map(zaokraglenie)
+            .join("; ")
 
     </script>
 
