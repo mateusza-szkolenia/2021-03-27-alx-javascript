@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+        /*
         function policz_cene_brutto_produktu(p){
             return p.cena_netto * (1+p.stawka_VAT);
         }
@@ -15,12 +16,18 @@
         function policz_wartosc_brutto(p){
             return policz_cene_brutto_produktu(p) * p.szt;
         }
-
+        */
         var pozycja1 = {
             produkt: "Pizza Hawajska",
             cena_netto: 14.34,
             stawka_VAT: 0.08,
-            szt: 4
+            szt: 4,
+            policz_cene_brutto: function(){
+                return this.cena_netto * (1+this.stawka_VAT)
+            },
+            policz_wartosc_brutto: function(){
+                return this.policz_cene_brutto() * this.szt;
+            }
         }
     </script>
 </body>
