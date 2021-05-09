@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prostokąty</h1>
+    
+    <button onclick="akcja_btn()">Przetwarzaj</button>
+    <br>
+    <p>Wpisz wymiary prostokątów. Każdy prostokąt to dwie liczby oddzielone spacją w nowej linii.</p>
+    <textarea id='daneWejsciowe' cols=50 rows=10></textarea>
+
+    <table border=1>
+        <thead>
+            <tr>
+                <th>szerokość</th>
+                <th>wysokość</th>
+                <th>pole</th>
+                <th>obwod</th>
+                <th>przekątna</th>
+            </tr>
+        </thead>
+        <tbody id="tabelkaWynikowa">
+        </tbody>
+    </table>
+
+    <script>
+        function Prostokat(szer, wys){
+            this.a = szer;
+            this.b = wys;
+            /* w metodach nie można zastosować funkcji strzałkowej, bo nie ma this */
+            this.pole = function(){
+                return this.a * this.b
+            };
+            this.obwod = function(){
+                return 2 * this.a + 2 * this.b
+            };
+            this.przekatna = function(){
+                return Math.sqrt(this.a * this.a + this.b * this.b)
+            };
+        }
+
+        
+
+        function akcja_btn(){
+            function dopisz_komorke(tresc, wiersz){
+                var kom = document.createElement('td')
+                kom.textContent = tresc
+                wiersz.append(kom)
+            }
+
+            function dopisz_wiersz(komorki, tabelka){
+                var wiersz = document.createElement('tr');
+                komorki.forEach(k => dopisz_komorke(k, wiersz));
+                tabelka.append(wiersz);
+            }
+
+            tabelkaWynikowa.innerHTML = ""
+
+            daneWejsciowe
+                .value
+                .split("\n")
+                .map(x => x.split(" "))
+                .map(x => x.map(y => parseFloat(y)))
+                .filter(x => !isNaN(x[0]) && !isNaN(x[1]))
+                .map(x => new Prostokat(x[0], x[1]))
+                .filter(x => (x.pole() > 2000))
+                .forEach(p => dopisz_wiersz(
+                    [p.a, p.b, p.pole(), p.obwod(), p.przekatna().toFixed(1)],
+                    tabelkaWynikowa
+                ));
+        }
+
+        function akcja_btn2(){
+            var linie = daneWejsciowe.value.split("\n")
+            var rekordy = linie.map(function(x){return x.split(" ")})
+            var rekordy2 = rekordy.map(function(x){ 
+                return x.map(function(y){ return parseFloat(y)})
+            })
+
+            console.log(linie)
+            console.log(rekordy)
+            console.log(rekordy2)
+        }
+
+    </script>
+
+</body>
+</html>
