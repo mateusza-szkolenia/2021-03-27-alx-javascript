@@ -9,7 +9,7 @@
 <body>
     <p>Otwórz konsolę</p>
     <script>
-        var imiona = ["Mateusz", "Zygmunt", "Andrzej", "Marcin", "Marian", "Marta", "Anna"]
+        var imiona = ["Mateusz", "Zygmunt", "Andrzej", "Katarzyna", "Marcin", "Marian", "Marta", "Anna"]
 
         // filtrowanie i mapowanie nie modyfikuje pierwotnej tablicy
         var imionaM = imiona.filter(x => x[0] == "M")
@@ -18,6 +18,9 @@
         // sortowanie modyfikuje pierwotną tablicę
         // in-place (w miejscu)
         var x = imiona.sort()
+
+        // sortowanie wg długości imienia
+        // var x = imiona.sort((i1, i2) => i1.length - i2.length)
 
         console.log(imiona)
         console.log(imionaM)
