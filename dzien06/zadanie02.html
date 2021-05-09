@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Spójrz w konsolę</p>
+
+    <script>
+        // konstruktor
+        function Osoba(waga, wzrost){
+            this.waga = waga;
+            this.wzrost = wzrost;
+            this.BMI = function(){
+                return this.waga/(this.wzrost*this.wzrost)
+            };
+        }
+
+        // użycie
+
+        var o1 = new Osoba(70, 1.81);
+        console.log("BMI tej osoby to:" + o1.BMI())
+
+        var o2 = new Osoba(55, 1.59);
+        console.log("BMI tej osoby to:" + o2.BMI())
+
+    </script>
+</body>
+</html>
