@@ -2,7 +2,7 @@
 
 Zaprojektować konstruktor `Osoba()` służący do tworzenia obiektów reprezentujących dane medyczne osoby (wzrost, waga) i pozwalający na wyliczanie BMI.
 
-Przykłąd użycia:
+Przykład użycia:
 
 ```javascript
 
