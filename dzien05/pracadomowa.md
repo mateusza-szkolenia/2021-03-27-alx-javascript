@@ -19,6 +19,7 @@ Rozbudować istniejący skrypt wyświetlający uczniów o następujące funkcje
 - Zaznaczenie ucznia z najwyższą i najniższą średnią
 - Zaznaczenie uczniów kwalifikujących się na czerwony pasek (średnia >= 4.75)
 - Policzenie średniej całej klasy
+- Policzenie mediany średnich
 - Policzenie ile razy występuje jakie imię
     - Maciej: 3, Barbara: 2 *itd* (w postaci listy lub tabelki wg uznania)
 
@@ -27,6 +28,7 @@ Wygenerować osobne listy:
 - listę uczniów ze średnią niższą niż 3.00
 - listę uczniów mających co najmniej jedną 6
 - listę uczniów mających co najmniej dwie jedynki
+- listę 3 uczniów z najwyższą średnią
 - *itd*
 
 ### Osoby
