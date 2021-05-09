@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Uczeń</h1>
+    <p>Imię: <output id='uimie'></output>
+    <p>Nazwisko: <output id='unaz'></output>
+    <p>Czerwony pasek: <output id='ucp'></output>
+
+    <script>
+    var uczen1 = {
+        "imie": "Marta",
+        nazwisko: "Uszakowska",
+        oceny: "4 4 1 3 1 1 5 4 1 5 1 5",
+        "czerwony pasek": false,
+        "400": "hej hej",
+        "hokus-pokus": 1234
+    }
+
+    var co = "oceny"
+
+    document.querySelector('#uimie').value = uczen1['imie']; // notacja tablic asocjacyjnych, słowników
+    document.querySelector('#unaz').value = uczen1.nazwisko; // notacja obiektowa
+    document.querySelector('#ucp').value = uczen1['czerwony pasek']; // notacja tablicowa, bo spacja w nazwie
+    document.querySelector('#ucp').value += uczen1["400"]; // notacja tablicowa, bo nazwa numeryczna
+    document.querySelector('#ucp').value += uczen1["hokus-pokus"]; // notacja tablicowa, bo minus w nazwie
+    uczen1[co];
+
+    uczen1["im" + "ie"];
+
+
+    /* Wady i zalety oby notacji
+    - notacja z kropką jest krótsza
+    - notacja tablicowa jest abrdziej uniwersalna:
+        - daje dostęp do pól o nazwach niebędących poprawną nazwą zmiennej, np. zawierających spację, minus itp
+        - daje dostęp do pól, których nazwa jest przechowywana w innej zmiennej albo wyliczana jako wartość wyrażenia
+    */
+    </script>
+</body>
+</html>
