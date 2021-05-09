@@ -49,8 +49,16 @@
             wiersz.append(kom)
         }
 
+        function dopisz_wiersz(komorki, tabelka){
+            var wiersz = document.createElement('tr');
+            komorki.forEach(k => dopisz_komorke(k, wiersz));
+            tabelka.append(wiersz);
+        }
+
         function akcja_btn(){
-            var prostokaty = daneWejsciowe
+            tabelkaWynikowa.innerHTML = ""
+
+            daneWejsciowe
                 .value
                 .split("\n")
                 .map(x => x.split(" "))
@@ -58,17 +66,10 @@
                 .filter(x => !isNaN(x[0]) && !isNaN(x[1]))
                 .map(x => new Prostokat(x[0], x[1]))
                 .filter(x => (x.pole() > 2000))
-
-            tabelkaWynikowa.innerHTML = ""
-
-            prostokaty.forEach(p => {
-                var wiersz = document.createElement('tr');
-                [p.a, p.b, p.pole(), p.obwod(), p.przekatna().toFixed(1)]
-                    .forEach(k => dopisz_komorke(k, wiersz));
-                tabelkaWynikowa.append(wiersz)
-            })
-
-            console.log(prostokaty)
+                .forEach(p => dopisz_wiersz(
+                    [p.a, p.b, p.pole(), p.obwod(), p.przekatna().toFixed(1)],
+                    tabelkaWynikowa
+                ));
         }
 
         function akcja_btn2(){
