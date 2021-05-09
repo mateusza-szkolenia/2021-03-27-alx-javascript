@@ -12,25 +12,20 @@
     <output id='pom'></output>
 
     <script>
-        function przelicz_C_na_F(t){
-            return 1.8 * t + 32.0;
-        }
-
-        function zaokraglenie(t){
-            return t.toFixed(0)
-        }
-
+        
         var pomiary_C = [
-            -5, -3, 0, 2, 7, 9, 13, 15.5, 20, 23, 21.5, 19, 15, 12, 8, 4, 3, 0, -1
+            -5, -3, 0, 2, 7, 9, 13, 15.5, 20, 23, 100, 21.5, 19, 15, 12, 8, 4, 3, 0, -1
         ]
 
-        var pomiary_F = pomiary_C.map(przelicz_C_na_F)
+        var pomiary_F = pomiary_C.map(function (t){ return 1.8 * t + 32.0; })
 
         document.querySelector('#pom').value = pomiary_F
-            .map(zaokraglenie)
+            .map(function (t){ return t.toFixed(0) })
             .join("; ")
 
     </script>
+
+    <!-- TypeScript -->
 
 </body>
 </html>
