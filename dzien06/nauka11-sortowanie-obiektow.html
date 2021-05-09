@@ -69,6 +69,7 @@
                 .filter(x => !isNaN(x[0]) && !isNaN(x[1]))
                 .map(x => new Prostokat(x[0], x[1]))
                 .filter(x => (x.pole() > 2000))
+                .sort((p1, p2) => p1.przekatna() - p2.przekatna())
                 .forEach(p => dopisz_wiersz(
                     [p.a, p.b, p.pole(), p.obwod(), p.przekatna().toFixed(1)],
                     tabelkaWynikowa
