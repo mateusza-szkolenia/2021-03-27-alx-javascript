@@ -31,6 +31,7 @@
         function Prostokat(szer, wys){
             this.a = szer;
             this.b = wys;
+            /* w metodach nie można zastosować funkcji strzałkowej, bo nie ma this */
             this.pole = function(){
                 return this.a * this.b
             };
