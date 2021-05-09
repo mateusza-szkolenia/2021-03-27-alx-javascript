@@ -18,7 +18,8 @@
                 return this.waga/(this.wzrost*this.wzrost)
             };
             this.czy_BMI_ok = function(){
-                return this.BMI() >= 20 && this.BMI() <= 25
+                var bmi = this.BMI();
+                return bmi >= 20 && bmi <= 25
             }
         }
 
