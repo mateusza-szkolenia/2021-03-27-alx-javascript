@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prostokąty</h1>
+    
+    <button onclick="akcja_btn()">Przetwarzaj</button>
+    <br>
+    <textarea id='daneWejsciowe' cols=50 rows=10></textarea>
+
+    <table border=1>
+        <thead>
+            <tr>
+                <th>szerokość</th>
+                <th>wysokość</th>
+                <th>pole</th>
+                <th>obwod</th>
+                <th>przekątna</th>
+            </tr>
+        </thead>
+        <tbody id="tabelkaWynikowa">
+        </tbody>
+    </table>
+
+    <script>
+        function Prostokat(szer, wys){
+            this.a = szer;
+            this.b = wys;
+            this.pole = function(){
+                return this.a * this.b
+            };
+            this.obwod = function(){
+                return 2 * this.a + 2 * this.b
+            };
+            this.przekatna = function(){
+                return Math.sqrt(this.a * this.a + this.b * this.b)
+            };
+        }
+
+        function akcja_btn(){
+            var prostokaty = daneWejsciowe
+                .value
+                .split("\n")
+                .map(function(x){return x.split(" ")})
+                .map(function(x){ 
+                    return x.map(function(y){ return parseFloat(y)})
+                })
+                .map(function(x){
+                    return new Prostokat(x[0], x[1])
+                })
+
+            tabelkaWynikowa.innerHTML = ""
+            for (var p of prostokaty){
+                var wiersz = document.createElement('tr')
+                var komA = document.createElement('td')
+                komA.textContent = p.a
+                wiersz.append(komA)
+
+                var komB = document.createElement('td')
+                komB.textContent = p.b
+                wiersz.append(komB)
+
+                var komP = document.createElement('td')
+                komP.textContent = p.pole()
+                wiersz.append(komP)
+
+                var komO = document.createElement('td')
+                komO.textContent = p.obwod()
+                wiersz.append(komO)
+
+                var komPrz = document.createElement('td')
+                komPrz.textContent = p.przekatna().toFixed(1)
+                wiersz.append(komPrz)
+
+                tabelkaWynikowa.append(wiersz)
+            }
+
+            console.log(prostokaty)
+        }
+
+        function akcja_btn2(){
+            var linie = daneWejsciowe.value.split("\n")
+            var rekordy = linie.map(function(x){return x.split(" ")})
+            var rekordy2 = rekordy.map(function(x){ 
+                return x.map(function(y){ return parseFloat(y)})
+            })
+
+            console.log(linie)
+            console.log(rekordy)
+            console.log(rekordy2)
+        }
+
+    </script>
+
+</body>
+</html>
