@@ -61,13 +61,12 @@
 
             tabelkaWynikowa.innerHTML = ""
             for (var p of prostokaty){
-                var wiersz = document.createElement('tr')
+                var wiersz = document.createElement('tr');
 
-                dopisz_komorke(p.a, wiersz)
-                dopisz_komorke(p.b, wiersz)
-                dopisz_komorke(p.pole(), wiersz)
-                dopisz_komorke(p.obwod(), wiersz)
-                dopisz_komorke(p.przekatna().toFixed(1), wiersz)
+                [p.a, p.b, p.pole(), p.obwod(), p.przekatna().toFixed(1)]
+                    .forEach(k => dopisz_komorke(k, wiersz));
+                    
+
 
                 tabelkaWynikowa.append(wiersz)
             }
