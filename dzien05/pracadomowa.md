@@ -8,13 +8,9 @@ Zrobić aplikację przeliczającą liczby z systemu dziesiętnego na binarny i o
 
 Zrobić [zegar binarny](https://en.wikipedia.org/wiki/Binary_clock).
 
-```
-Date()
-```
-
 ### Uczniowie
 
-Rozbudować istniejący skrypt wyświetlający uczniów o następujące funkcje
+Rozbudować istniejący skrypt wyświetlający uczniów o następujące funkcje:
 
 - Zaznaczenie ucznia z najwyższą i najniższą średnią
 - Zaznaczenie uczniów kwalifikujących się na czerwony pasek (średnia >= 4.75)
@@ -42,6 +38,7 @@ Dodatkowo:
 - najwyższą i najniższą
 - najcięższą i najlżejszą
 - o największym i najmniejszym BMI
+- znaleźć średnią i medianę tych wartości
 
 ### Tankowania
 
@@ -52,4 +49,7 @@ W oparciu o dane wygenerowanie pod adresem: https://mateusza2.github.io/Programo
 - średni koszt kilometra na każdym tankowaniu oraz w całym okresie
 - średni koszt dzienny (j.w.)
 - średni koszt miesięczny (j.w.)
-  
+
+### Wykresy
+
+Do powyższych zadań zrobić wykresy.
