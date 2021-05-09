@@ -53,6 +53,32 @@
                 .map(function(x){
                     return new Prostokat(x[0], x[1])
                 })
+
+            for (var p of prostokaty){
+                var wiersz = document.createElement('tr')
+                var komA = document.createElement('td')
+                komA.textContent = p.a
+                wiersz.append(komA)
+
+                var komB = document.createElement('td')
+                komB.textContent = p.b
+                wiersz.append(komB)
+
+                var komP = document.createElement('td')
+                komP.textContent = p.pole()
+                wiersz.append(komP)
+
+                var komO = document.createElement('td')
+                komO.textContent = p.obwod()
+                wiersz.append(komO)
+
+                var komPrz = document.createElement('td')
+                komPrz.textContent = p.przekatna().toFixed(1)
+                wiersz.append(komPrz)
+
+                tabelkaWynikowa.append(wiersz)
+            }
+
             console.log(prostokaty)
         }
 
