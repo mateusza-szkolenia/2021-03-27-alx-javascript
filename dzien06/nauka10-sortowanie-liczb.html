@@ -10,18 +10,13 @@
     <p>Otwórz konsolę</p>
     <script>
 
-        function porownaj(a, b){
-            return a - b
-        }
-
         var liczby = [1, 5, 10, 11, 111, 1001, 2000, 6, 6000]
 
-        liczby.sort(porownaj)
+        liczby.sort((a, b) => a - b)
 
         console.log(liczby)
-        // zadziała źle
-        // kolejność leksykalna:
-        // 1, 10, 1001, 11, 111, 2000, 5, 6, 6000
+        // zadziała dobrze
+        // kolejność rosnąca
 
     </script>
 </body>
